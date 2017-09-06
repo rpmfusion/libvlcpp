@@ -13,6 +13,8 @@ Patch0:         libvlcpp-%{version}-pkgconfig.patch
 
 BuildArch: noarch
 
+BuildRequires: libtool
+
 
 %description
 C++ bindings for libvlc.
