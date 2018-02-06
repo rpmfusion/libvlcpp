@@ -1,8 +1,8 @@
-%global date 20170905
+%global date 20180206
 
 Name:           libvlcpp
 Version:        0.1.0
-Release:        1.%{?date}git%{?dist}
+Release:        2.%{?date}git%{?dist}
 Summary:        C++ bindings for libvlc
 
 License:        LGPLv2+
@@ -50,5 +50,8 @@ find %{buildroot} -name '*.la' -exec rm -f {} ';'
 
 
 %changelog
+* Tue Feb 06 2018 Nicolas Chauvet <kwizart@gmail.com> - 0.1.0-2.20180206git
+- Update snapshot
+
 * Mon Sep 04 2017 Nicolas Chauvet <kwizart@gmail.com> - 0.1.0-1
 - Initial spec file
