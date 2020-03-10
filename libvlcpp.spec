@@ -1,14 +1,14 @@
-%global date 20180206
+%global commit0 e81b9f06493becabeec794e351bb357a90af264a
+%global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
 
 Name:           libvlcpp
 Version:        0.1.0
-Release:        7.%{?date}git%{?dist}
+Release:        8.%{?shortcommit0}git%{?dist}
 Summary:        C++ bindings for libvlc
 
 License:        LGPLv2+
 URL:            https://code.videolan.org/videolan/libvlcpp
-Source0:        libvlcpp-%{date}.tar.xz
-Source9:        libvlcpp-snapshot.sh
+Source0:        %{url}/-/archive/%{commit0}/%{name}-%{shortcommit0}.tar.gz
 Patch0:         libvlcpp-%{version}-pkgconfig.patch
 
 BuildArch: noarch
@@ -27,7 +27,7 @@ C++ bindings for libvlc.
 
 
 %prep
-%autosetup -p1 -n %{name}-%{date}
+%autosetup -p1 -n %{name}-%{commit0}
 ./bootstrap
 
 
@@ -50,6 +50,9 @@ find %{buildroot} -name '*.la' -exec rm -f {} ';'
 
 
 %changelog
+* Tue Mar 10 2020 Nicolas Chauvet <kwizart@gmail.com> - 0.1.0-8.e81b9f0git
+- Update to current snapshot
+
 * Tue Feb 04 2020 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 0.1.0-7.20180206git
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
 
