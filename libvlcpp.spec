@@ -3,7 +3,7 @@
 
 Name:           libvlcpp
 Version:        0.1.0
-Release:        9.%{?shortcommit0}git%{?dist}
+Release:        10.%{?shortcommit0}git%{?dist}
 Summary:        C++ bindings for libvlc
 
 License:        LGPLv2+
@@ -50,6 +50,9 @@ find %{buildroot} -name '*.la' -exec rm -f {} ';'
 
 
 %changelog
+* Wed Feb 03 2021 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 0.1.0-10.e81b9f0git
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_34_Mass_Rebuild
+
 * Tue Aug 18 2020 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 0.1.0-9.e81b9f0git
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_33_Mass_Rebuild
 
