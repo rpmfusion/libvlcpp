@@ -1,9 +1,10 @@
-%global commit0 e81b9f06493becabeec794e351bb357a90af264a
+%global commit0 d76fe0678e92ada5897eac975e14edc9981130e8
+%global gitdate 20230527
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
 
 Name:           libvlcpp
 Version:        0.1.0
-Release:        14.%{?shortcommit0}git%{?dist}
+Release:        14.%{gitdate}git%{shortcommit0}%{?dist}
 Summary:        C++ bindings for libvlc
 
 License:        LGPLv2+
@@ -50,7 +51,10 @@ find %{buildroot} -name '*.la' -exec rm -f {} ';'
 
 
 %changelog
-* Wed Aug 02 2023 RPM Fusion Release Engineering <sergiomb@rpmfusion.org> - 0.1.0-14.e81b9f0git
+* Thu Aug 03 2023 Sérgio Basto <sergio@serjux.com> - 0.1.0-14.20230527gitd76fe06
+- Update to current snapshot
+
+* Wed Aug 02 2023 RPM Fusion Release Engineering <sergiomb@rpmfusion.org>
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_39_Mass_Rebuild
 
 * Sun Aug 07 2022 RPM Fusion Release Engineering <sergiomb@rpmfusion.org> - 0.1.0-13.e81b9f0git
