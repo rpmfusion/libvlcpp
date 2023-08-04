@@ -29,11 +29,11 @@ C++ bindings for libvlc.
 
 %prep
 %autosetup -p1 -n %{name}-%{commit0}
-./bootstrap
 
 
 %build
-%configure
+./bootstrap
+%configure --host=$(uname -m)
 %make_build
 
 
