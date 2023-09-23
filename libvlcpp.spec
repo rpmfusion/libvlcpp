@@ -4,7 +4,7 @@
 
 Name:           libvlcpp
 Version:        0.1.0
-Release:        14.%{gitdate}git%{shortcommit0}%{?dist}
+Release:        15.%{gitdate}git%{shortcommit0}%{?dist}
 Summary:        C++ bindings for libvlc
 
 License:        LGPLv2+
@@ -33,7 +33,6 @@ C++ bindings for libvlc.
 
 %build
 ./bootstrap
-export CPPFLAGS="$CXXFLAGS"
 %configure
 %make_build
 
@@ -52,6 +51,9 @@ find %{buildroot} -name '*.la' -exec rm -f {} ';'
 
 
 %changelog
+* Sat Sep 23 2023 Sérgio Basto <sergio@serjux.com> - 0.1.0-15.20230527gitd76fe06
+- Try build it without the hack
+
 * Thu Aug 03 2023 Sérgio Basto <sergio@serjux.com> - 0.1.0-14.20230527gitd76fe06
 - Update to current snapshot
 
