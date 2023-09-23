@@ -33,7 +33,8 @@ C++ bindings for libvlc.
 
 %build
 ./bootstrap
-%configure --host=$(uname -m)
+export CPPFLAGS="$CXXFLAGS"
+%configure
 %make_build
 
 
